@@ -69,7 +69,7 @@ export default function HomePage() {
           href={whatsappLink("Olá, Júlio! Quero saber mais sobre a hipnoterapia para ansiedade.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-bold text-cream transition-colors hover:bg-primary-dark"
+          className="inline-flex items-center justify-center rounded-full bg-whatsapp px-7 py-3.5 text-base font-bold text-cream transition-colors hover:bg-whatsapp-dark"
         >
           Agendar minha sessão
         </a>

@@ -74,7 +74,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-full bg-primary px-6 py-3 text-sm font-bold text-cream transition-colors hover:bg-primary-dark"
+        className="w-full rounded-full bg-whatsapp px-6 py-3 text-sm font-bold text-cream transition-colors hover:bg-whatsapp-dark"
       >
         Enviar e continuar no WhatsApp
       </button>

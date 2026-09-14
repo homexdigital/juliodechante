@@ -40,7 +40,7 @@ export default function Header() {
           href={cta}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-cream transition-colors hover:bg-primary-dark md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-bold text-cream transition-colors hover:bg-whatsapp-dark md:inline-flex"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Agendar no WhatsApp
@@ -70,7 +70,7 @@ export default function Header() {
               href={cta}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-cream hover:bg-primary-dark"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-bold text-cream hover:bg-whatsapp-dark"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Agendar no WhatsApp

@@ -7,6 +7,8 @@
   --foreground: #ffffff;
   --color-primary: #00a3ff;
   --color-primary-dark: #1d9bf0;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe57;
   --color-accent: #e5a823;
   --color-accent-dark: #d4af37;
   --color-sage: #7aa0b8;
@@ -27,6 +29,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--color-primary);
   --color-primary-dark: var(--color-primary-dark);
+  --color-whatsapp: var(--color-whatsapp);
+  --color-whatsapp-dark: var(--color-whatsapp-dark);
   --color-accent: var(--color-accent);
   --color-accent-dark: var(--color-accent-dark);
   --color-sage: var(--color-sage);
