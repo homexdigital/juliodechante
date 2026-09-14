@@ -28,7 +28,7 @@ export default function SiteSearchForm() {
       />
       <button
         type="submit"
-        className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-cream hover:bg-primary-dark"
+        className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-navy hover:bg-primary-dark"
       >
         Buscar
       </button>

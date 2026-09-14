@@ -22,7 +22,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram de Júlio Dechante"
-              className="rounded-full border border-primary/30 p-2 text-primary hover:bg-primary hover:text-cream"
+              className="rounded-full border border-primary/30 p-2 text-primary hover:bg-primary hover:text-navy"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
@@ -31,7 +31,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Canal do YouTube de Júlio Dechante"
-              className="rounded-full border border-primary/30 p-2 text-primary hover:bg-primary hover:text-cream"
+              className="rounded-full border border-primary/30 p-2 text-primary hover:bg-primary hover:text-navy"
             >
               <YoutubeIcon className="h-4 w-4" />
             </a>

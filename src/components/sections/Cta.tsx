@@ -25,7 +25,7 @@ export default function Cta({
           href={whatsappLink(whatsappMessage)}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-whatsapp px-7 py-3.5 text-base font-bold text-cream transition-colors hover:bg-whatsapp-dark"
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-whatsapp px-7 py-3.5 text-base font-bold text-navy transition-colors hover:bg-whatsapp-dark"
         >
           <MessageCircle className="h-5 w-5" aria-hidden="true" />
           {buttonLabel}

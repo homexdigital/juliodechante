@@ -82,7 +82,7 @@ function WhatsappCta({ label }: { label: string }) {
       href={whatsappLink(WHATSAPP_MESSAGE)}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-cream transition-colors hover:bg-whatsapp-dark sm:text-base"
+      className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-7 py-4 text-center text-sm font-black uppercase tracking-wide text-navy transition-colors hover:bg-whatsapp-dark sm:text-base"
     >
       <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
       {label}
@@ -212,7 +212,7 @@ export default function LeadCapturePage() {
           <ol className="mt-12 space-y-8">
             {STEPS.map((step) => (
               <li key={step.number} className="flex gap-5">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-xl font-black text-cream">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-xl font-black text-navy">
                   {step.number}
                 </span>
                 <div>
@@ -282,7 +282,7 @@ export default function LeadCapturePage() {
           href={ctaHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-full bg-whatsapp px-4 py-3.5 text-sm font-black uppercase tracking-wide text-cream"
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-whatsapp px-4 py-3.5 text-sm font-black uppercase tracking-wide text-navy"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Agendar avaliação

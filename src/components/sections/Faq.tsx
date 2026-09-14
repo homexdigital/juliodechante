@@ -1,3 +1,6 @@
+import JsonLd from "@/components/JsonLd";
+import { graph, faqPageSchema } from "@/lib/schema";
+
 export interface FaqItem {
   question: string;
   answer: string;
@@ -8,9 +11,11 @@ export interface FaqProps {
   heading?: string;
 }
 
+// Regra 5 — perguntas visíveis e marcadas com FAQPage em JSON-LD.
 export default function Faq({ items, heading = "Perguntas frequentes" }: FaqProps) {
   return (
     <section aria-labelledby="faq-heading" className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+      <JsonLd data={graph(faqPageSchema(items))} />
       <h2
         id="faq-heading"
         className="text-center font-heading text-2xl font-black uppercase tracking-wide text-cream sm:text-3xl"
