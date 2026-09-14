@@ -28,6 +28,7 @@ export const STATIC_ROUTES: StaticRouteEntry[] = [
   { route: "/contato", priority: 0.9, changeFrequency: "yearly" },
   { route: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { route: "/libertar-minha-mente", priority: 0.9, changeFrequency: "monthly" },
+  { route: "/controle-da-ansiedade", priority: 0.9, changeFrequency: "monthly" },
   { route: "/privacidade", priority: 0.2, changeFrequency: "yearly" },
   { route: "/termos", priority: 0.2, changeFrequency: "yearly" },
 ];

@@ -18,6 +18,7 @@ export const KEYWORD_MAP = {
   "/contato": "agendar sessão de hipnoterapia em Sinop",
   "/blog": "blog sobre ansiedade e hipnoterapia",
   "/libertar-minha-mente": "hipnoterapia avançada libertar a mente",
+  "/controle-da-ansiedade": "hipnoterapia sem remédios para ansiedade",
   "/privacidade": "política de privacidade Julio Dechante",
   "/termos": "termos de uso Julio Dechante",
 } as const;
