@@ -35,7 +35,10 @@ export const STATIC_ROUTES: StaticRouteEntry[] = [
 
 function routeToPageFile(route: string): string {
   const segment = route === "/" ? "" : route;
+  // As páginas "normais" vivem no grupo de rotas (site); /links fica fora dele.
   const candidates = [
+    path.join(APP_DIR, "(site)", segment, "page.tsx"),
+    path.join(APP_DIR, "(site)", segment, "page.mdx"),
     path.join(APP_DIR, segment, "page.tsx"),
     path.join(APP_DIR, segment, "page.mdx"),
   ];

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Great_Vibes, Montserrat } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/JsonLd";
 import { graph, organizationSchema, localBusinessSchema } from "@/lib/schema";
 import { SITE_URL, SITE_NAME, business } from "@/lib/site-config";
@@ -31,6 +29,10 @@ export const metadata: Metadata = {
   authors: [{ name: business.founderName, url: `${SITE_URL}/sobre` }],
 };
 
+// Layout raiz "puro": html/body, fontes e o JSON-LD sitewide. O header/footer
+// do site vive em src/app/(site)/layout.tsx — rotas fora desse grupo de rotas
+// (ex.: /links, o link-in-bio) ficam sem chrome, e nada aqui usa headers()/
+// cookies(), então todas as páginas continuam estáticas (Regra 11).
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -39,17 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col bg-navy text-ink">
         <JsonLd data={graph(organizationSchema(), localBusinessSchema())} />
-        <a
-          href="#conteudo-principal"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-navy"
-        >
-          Pular para o conteúdo principal
-        </a>
-        <Header />
-        <main id="conteudo-principal" className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
