@@ -41,7 +41,8 @@ export const business = {
   social: {
     instagram: "https://www.instagram.com/juliodechanteofc/",
     youtube: "https://www.youtube.com/@juliodechantehipnoterapeut1533/videos",
-    googleProfile: "https://share.google/mU7OWk7iC0iFGcjdb",
+    googleProfile:
+      "https://www.google.com/search?kgmid=/g/11fq4_yfw0&hl=pt-BR&q=Julio+Dechante+Hipnoterapeuta+Sinop&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=439de133793a24e8&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m5/1#lrd=0x93a781357d203c49:0x66947a756a792347,1,,,,",
   },
   podcasts: [
     "https://www.youtube.com/live/Ecsg06K4Ro4",
