@@ -27,6 +27,7 @@ export const STATIC_ROUTES: StaticRouteEntry[] = [
   { route: "/servicos/hipnoterapia-online", priority: 0.8, changeFrequency: "monthly" },
   { route: "/contato", priority: 0.9, changeFrequency: "yearly" },
   { route: "/blog", priority: 0.7, changeFrequency: "weekly" },
+  { route: "/libertar-minha-mente", priority: 0.9, changeFrequency: "monthly" },
   { route: "/privacidade", priority: 0.2, changeFrequency: "yearly" },
   { route: "/termos", priority: 0.2, changeFrequency: "yearly" },
 ];

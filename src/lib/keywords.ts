@@ -17,6 +17,7 @@ export const KEYWORD_MAP = {
   "/servicos/hipnoterapia-online": "hipnoterapia online",
   "/contato": "agendar sessão de hipnoterapia em Sinop",
   "/blog": "blog sobre ansiedade e hipnoterapia",
+  "/libertar-minha-mente": "hipnoterapia avançada libertar a mente",
   "/privacidade": "política de privacidade Julio Dechante",
   "/termos": "termos de uso Julio Dechante",
 } as const;
