@@ -7,10 +7,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-black/5 bg-cream-dark">
+    <footer className="border-t border-white/10 bg-navy-dark">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4">
         <div>
-          <p className="font-heading text-lg font-semibold text-primary">Júlio Dechante</p>
+          <p className="font-script text-3xl text-primary">Júlio Dechante</p>
           <p className="mt-2 text-sm text-ink-soft">
             Mestre em Hipnoterapia Avançada, criador do Método SER. Mais de{" "}
             {business.peopleServed.toLocaleString("pt-BR")} pessoas tratadas em Sinop-MT e online
@@ -22,7 +22,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram de Júlio Dechante"
-              className="rounded-full border border-primary/20 p-2 text-primary hover:bg-primary hover:text-cream"
+              className="rounded-full border border-primary/30 p-2 text-primary hover:bg-primary hover:text-cream"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
@@ -31,7 +31,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Canal do YouTube de Júlio Dechante"
-              className="rounded-full border border-primary/20 p-2 text-primary hover:bg-primary hover:text-cream"
+              className="rounded-full border border-primary/30 p-2 text-primary hover:bg-primary hover:text-cream"
             >
               <YoutubeIcon className="h-4 w-4" />
             </a>
@@ -127,7 +127,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-black/5 px-4 py-6 text-center text-xs text-ink-soft sm:px-6">
+      <div className="border-t border-white/10 px-4 py-6 text-center text-xs text-ink-soft sm:px-6">
         © {year} {business.legalName}. Atendimento presencial em Sinop-MT e online para todo o
         mundo.
       </div>

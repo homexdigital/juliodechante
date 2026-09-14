@@ -81,11 +81,11 @@ export default function ServicosPage() {
             <Link
               key={service.href}
               href={service.href}
-              className="block rounded-2xl border border-black/5 bg-white/70 p-6 transition-colors hover:border-primary/30 hover:bg-white"
+              className="block rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-primary/40 hover:bg-white/10"
             >
-              <h2 className="font-heading text-xl font-semibold text-primary">{service.title}</h2>
+              <h2 className="font-heading text-xl font-bold text-cream">{service.title}</h2>
               <p className="mt-2 text-sm text-ink-soft">{service.description}</p>
-              <span className="mt-3 inline-block text-sm font-medium text-accent-dark">
+              <span className="mt-3 inline-block text-sm font-medium text-primary">
                 Saiba como funciona este atendimento →
               </span>
             </Link>

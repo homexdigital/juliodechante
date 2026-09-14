@@ -38,7 +38,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
+          className="mt-1 w-full rounded-lg border border-white/15 bg-navy-dark px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
         />
       </div>
 
@@ -49,7 +49,7 @@ export default function ContactForm() {
         <select
           id="topic"
           name="topic"
-          className="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
+          className="mt-1 w-full rounded-lg border border-white/15 bg-navy-dark px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
           defaultValue="Ansiedade"
         >
           <option>Ansiedade</option>
@@ -68,13 +68,13 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={3}
-          className="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
+          className="mt-1 w-full rounded-lg border border-white/15 bg-navy-dark px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
         />
       </div>
 
       <button
         type="submit"
-        className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-primary-dark"
+        className="w-full rounded-full bg-primary px-6 py-3 text-sm font-bold text-cream transition-colors hover:bg-primary-dark"
       >
         Enviar e continuar no WhatsApp
       </button>

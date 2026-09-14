@@ -16,10 +16,10 @@ export interface PageHeroProps {
 
 export default function PageHero({ eyebrow, h1, intro, portrait, children }: PageHeroProps) {
   return (
-    <section className="border-b border-black/5 bg-gradient-to-b from-cream-dark to-cream">
+    <section className="border-b border-white/10 bg-gradient-to-b from-surface via-navy-dark to-navy">
       <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6 sm:py-20">
         {eyebrow ? (
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent-dark">
+          <p className="font-heading text-sm font-bold uppercase tracking-[0.22em] text-accent">
             {eyebrow}
           </p>
         ) : null}
@@ -31,7 +31,7 @@ export default function PageHero({ eyebrow, h1, intro, portrait, children }: Pag
               width={280}
               height={280}
               priority
-              className="mx-auto h-56 w-56 rounded-full object-cover object-top shadow-[0_12px_40px_rgba(31,77,67,0.28)] ring-4 ring-cream sm:h-64 sm:w-64"
+              className="mx-auto h-56 w-56 rounded-full object-cover object-top shadow-[0_12px_40px_rgba(0,163,255,0.25)] ring-4 ring-primary/40 sm:h-64 sm:w-64"
             />
             {portrait.caption ? (
               <figcaption className="mt-4 text-sm text-ink-soft">{portrait.caption}</figcaption>
@@ -39,7 +39,7 @@ export default function PageHero({ eyebrow, h1, intro, portrait, children }: Pag
           </figure>
         ) : null}
         <h1
-          className={`${portrait || eyebrow ? "mt-6" : ""} text-balance font-heading text-3xl font-semibold text-primary sm:text-4xl md:text-5xl`}
+          className={`${portrait || eyebrow ? "mt-6" : ""} text-balance font-heading text-3xl font-black uppercase tracking-wide text-cream sm:text-4xl md:text-5xl`}
         >
           {h1}
         </h1>

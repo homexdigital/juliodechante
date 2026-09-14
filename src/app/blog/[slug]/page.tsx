@@ -66,7 +66,7 @@ export default async function BlogPostPage({
       <PageHero eyebrow={`Publicado em ${formatDate(post.datePublished)}`} h1={post.title} intro={post.description} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <div className="prose prose-neutral max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-primary">
+        <div className="prose max-w-none prose-headings:font-heading prose-headings:text-cream prose-a:text-primary">
           <MDXRemote source={post.content} />
         </div>
       </article>

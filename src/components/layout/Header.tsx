@@ -15,14 +15,11 @@ export default function Header() {
   const cta = whatsappLink(DEFAULT_WHATSAPP_MESSAGE);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-cream/95 backdrop-blur supports-[backdrop-filter]:bg-cream/80">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/85">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link
-          href="/"
-          className="font-heading text-lg font-semibold text-primary sm:text-xl"
-        >
-          Júlio Dechante
-          <span className="block text-xs font-sans font-normal text-ink-soft">
+        <Link href="/" className="leading-tight">
+          <span className="font-script text-3xl text-primary sm:text-4xl">Júlio Dechante</span>
+          <span className="mt-0.5 block text-[0.65rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-soft sm:text-xs">
             Mestre em Hipnoterapia Avançada
           </span>
         </Link>
@@ -43,7 +40,7 @@ export default function Header() {
           href={cta}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-primary-dark md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-cream transition-colors hover:bg-primary-dark md:inline-flex"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Agendar no WhatsApp
@@ -51,14 +48,14 @@ export default function Header() {
 
         <details className="group relative md:hidden">
           <summary
-            className="flex cursor-pointer list-none items-center rounded-md border border-primary/20 px-3 py-2 text-sm font-medium text-primary [&::-webkit-details-marker]:hidden"
+            className="flex cursor-pointer list-none items-center rounded-md border border-primary/40 px-3 py-2 text-sm font-medium text-primary [&::-webkit-details-marker]:hidden"
             aria-label="Abrir menu de navegação"
           >
             Menu
           </summary>
           <nav
             aria-label="Navegação principal (mobile)"
-            className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-black/5 bg-cream p-4 shadow-lg"
+            className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-white/10 bg-navy-dark p-4 shadow-lg"
           >
             <ul className="flex flex-col gap-3 text-sm font-medium text-ink">
               {NAV_LINKS.map((link) => (
@@ -73,7 +70,7 @@ export default function Header() {
               href={cta}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-cream hover:bg-primary-dark"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-cream hover:bg-primary-dark"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Agendar no WhatsApp

@@ -20,10 +20,10 @@ const MAIN_LINKS = [
 export default function NotFound() {
   return (
     <section className="mx-auto flex max-w-2xl flex-col items-center px-4 py-20 text-center sm:px-6">
-      <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent-dark">
+      <p className="font-heading text-sm font-bold uppercase tracking-widest text-accent">
         Erro 404
       </p>
-      <h1 className="mt-3 font-heading text-3xl font-semibold text-primary sm:text-4xl">
+      <h1 className="mt-3 font-heading text-3xl font-black uppercase tracking-wide text-cream sm:text-4xl">
         Essa página não foi encontrada
       </h1>
       <p className="mt-4 text-ink-soft">
@@ -41,7 +41,7 @@ export default function NotFound() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="block rounded-xl border border-black/5 bg-white/70 px-4 py-3 text-sm font-medium text-primary hover:border-primary/30"
+                className="block rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-primary hover:border-primary/40"
               >
                 {link.label}
               </Link>

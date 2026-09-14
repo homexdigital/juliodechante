@@ -39,16 +39,16 @@ export default function BlogPage() {
               <li key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="block rounded-2xl border border-black/5 bg-white/70 p-6 transition-colors hover:border-primary/30 hover:bg-white"
+                  className="block rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-primary/40 hover:bg-white/10"
                 >
-                  <p className="text-xs font-medium uppercase tracking-wide text-accent-dark">
+                  <p className="text-xs font-bold uppercase tracking-wide text-accent">
                     {formatDate(post.datePublished)}
                   </p>
-                  <h2 className="mt-2 font-heading text-xl font-semibold text-primary">
+                  <h2 className="mt-2 font-heading text-xl font-bold text-cream">
                     {post.title}
                   </h2>
                   <p className="mt-2 text-sm text-ink-soft">{post.description}</p>
-                  <span className="mt-3 inline-block text-sm font-medium text-accent-dark">
+                  <span className="mt-3 inline-block text-sm font-medium text-primary">
                     Ler artigo completo →
                   </span>
                 </Link>

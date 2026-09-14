@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Great_Vibes, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -7,16 +7,18 @@ import JsonLd from "@/components/JsonLd";
 import { graph, organizationSchema, localBusinessSchema } from "@/lib/schema";
 import { SITE_URL, SITE_NAME, business } from "@/lib/site-config";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
   subsets: ["latin"],
   display: "swap",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -33,9 +35,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${greatVibes.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-cream text-ink">
+      <body className="flex min-h-full flex-col bg-navy text-ink">
         <JsonLd data={graph(organizationSchema(), localBusinessSchema())} />
         <a
           href="#conteudo-principal"

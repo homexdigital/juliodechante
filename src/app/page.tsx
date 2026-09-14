@@ -69,19 +69,19 @@ export default function HomePage() {
           href={whatsappLink("Olá, Júlio! Quero saber mais sobre a hipnoterapia para ansiedade.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-cream transition-colors hover:bg-primary-dark"
+          className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-bold text-cream transition-colors hover:bg-primary-dark"
         >
           Agendar minha sessão
         </a>
         <Link
           href="/metodo-ser"
-          className="inline-flex items-center justify-center rounded-full border border-primary px-7 py-3.5 text-base font-semibold text-primary transition-colors hover:bg-primary hover:text-cream"
+          className="inline-flex items-center justify-center rounded-full border border-primary px-7 py-3.5 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-cream"
         >
           Conhecer o Método SER
         </Link>
       </PageHero>
 
-      <section aria-label="Números em destaque" className="border-b border-black/5 bg-white/60">
+      <section aria-label="Números em destaque" className="border-b border-white/10 bg-white/5">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 py-10 text-center sm:grid-cols-3 sm:px-6">
           <div>
             <p className="font-heading text-3xl font-semibold text-primary">+5.000</p>
@@ -127,31 +127,31 @@ export default function HomePage() {
         </p>
       </ContentSection>
 
-      <section aria-label="Diferenciais" className="bg-cream-dark/50">
+      <section aria-label="Diferenciais" className="bg-navy-dark/80">
         <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-          <h2 className="text-center font-heading text-2xl font-semibold text-primary sm:text-3xl">
+          <h2 className="text-center font-heading text-2xl font-black uppercase tracking-wide text-cream sm:text-3xl">
             Por que tratar a ansiedade com Júlio Dechante?
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             <div className="text-center">
-              <Sparkles className="mx-auto h-8 w-8 text-accent-dark" aria-hidden="true" />
-              <h3 className="mt-3 font-heading text-lg font-semibold text-ink">Método SER exclusivo</h3>
+              <Sparkles className="mx-auto h-8 w-8 text-accent" aria-hidden="true" />
+              <h3 className="mt-3 font-heading text-lg font-bold text-ink">Método SER exclusivo</h3>
               <p className="mt-2 text-sm text-ink-soft">
                 Protocolo próprio de hipnoterapia avançada, desenvolvido por Júlio Dechante ao
                 longo de mais de 7 anos de prática clínica.
               </p>
             </div>
             <div className="text-center">
-              <Users className="mx-auto h-8 w-8 text-accent-dark" aria-hidden="true" />
-              <h3 className="mt-3 font-heading text-lg font-semibold text-ink">+5.000 pessoas tratadas</h3>
+              <Users className="mx-auto h-8 w-8 text-accent" aria-hidden="true" />
+              <h3 className="mt-3 font-heading text-lg font-bold text-ink">+5.000 pessoas tratadas</h3>
               <p className="mt-2 text-sm text-ink-soft">
                 Experiência aplicada em casos reais de ansiedade, traumas, fobias e bloqueios
                 emocionais em Sinop-MT e a distância.
               </p>
             </div>
             <div className="text-center">
-              <ShieldCheck className="mx-auto h-8 w-8 text-accent-dark" aria-hidden="true" />
-              <h3 className="mt-3 font-heading text-lg font-semibold text-ink">Sem remédios, sem julgamentos</h3>
+              <ShieldCheck className="mx-auto h-8 w-8 text-accent" aria-hidden="true" />
+              <h3 className="mt-3 font-heading text-lg font-bold text-ink">Sem remédios, sem julgamentos</h3>
               <p className="mt-2 text-sm text-ink-soft">
                 Um espaço de escuta e técnica, para reeducar emoções pela raiz. Saiba mais{" "}
                 <Link href="/sobre">sobre a trajetória de Júlio Dechante</Link>.

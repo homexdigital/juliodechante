@@ -24,11 +24,11 @@ export default function SiteSearchForm() {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Buscar no site (ex.: hipnoterapia para ansiedade)"
-        className="w-full rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
+        className="w-full rounded-full border border-white/15 bg-navy-dark px-4 py-2.5 text-sm text-ink placeholder:text-ink-soft focus:border-primary focus:outline-none"
       />
       <button
         type="submit"
-        className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-cream hover:bg-primary-dark"
+        className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-cream hover:bg-primary-dark"
       >
         Buscar
       </button>

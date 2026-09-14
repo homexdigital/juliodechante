@@ -2,19 +2,24 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #fbf7f1;
-  --foreground: #1c2b27;
-  --color-primary: #1f4d43;
-  --color-primary-dark: #123028;
-  --color-accent: #c8873f;
-  --color-accent-dark: #8a5423;
-  --color-sage: #7c9a80;
-  --color-cream: #fbf7f1;
-  --color-cream-dark: #f1e9dc;
-  --color-ink: #1c2b27;
-  --color-ink-soft: #445953;
-  --font-heading: var(--font-fraunces);
-  --font-sans: var(--font-manrope);
+  /* Identidade visual — Júlio Dechante */
+  --background: #0e2338;
+  --foreground: #ffffff;
+  --color-primary: #00a3ff;
+  --color-primary-dark: #1d9bf0;
+  --color-accent: #e5a823;
+  --color-accent-dark: #d4af37;
+  --color-sage: #7aa0b8;
+  --color-navy: #0e2338;
+  --color-navy-dark: #101e2e;
+  --color-surface: #111111;
+  --color-cream: #ffffff;
+  --color-cream-dark: #101e2e;
+  --color-ink: #ffffff;
+  --color-ink-soft: #a8b9c9;
+  --font-heading: var(--font-montserrat);
+  --font-sans: var(--font-montserrat);
+  --font-script: var(--font-great-vibes);
 }
 
 @theme inline {
@@ -25,12 +30,16 @@
   --color-accent: var(--color-accent);
   --color-accent-dark: var(--color-accent-dark);
   --color-sage: var(--color-sage);
+  --color-navy: var(--color-navy);
+  --color-navy-dark: var(--color-navy-dark);
+  --color-surface: var(--color-surface);
   --color-cream: var(--color-cream);
   --color-cream-dark: var(--color-cream-dark);
   --color-ink: var(--color-ink);
   --color-ink-soft: var(--color-ink-soft);
   --font-heading: var(--font-heading);
   --font-sans: var(--font-sans);
+  --font-script: var(--font-script);
 }
 
 body {
@@ -39,15 +48,43 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-heading), Georgia, serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
+.font-script {
+  font-family: var(--font-script), cursive;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.prose {
+  --tw-prose-body: var(--color-ink-soft);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-lead: var(--color-ink-soft);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-counters: var(--color-sage);
+  --tw-prose-bullets: var(--color-primary);
+  --tw-prose-hr: rgb(255 255 255 / 0.12);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-captions: var(--color-ink-soft);
+  --tw-prose-th-borders: rgb(255 255 255 / 0.15);
+  --tw-prose-td-borders: rgb(255 255 255 / 0.1);
+}
+
 .prose :where(h2, h3) {
-  font-family: var(--font-heading), Georgia, serif;
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  font-weight: 800;
 }

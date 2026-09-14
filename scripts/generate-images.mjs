@@ -4,9 +4,10 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const SOURCE = path.join(ROOT, "perfiljulio.jpg");
-const PRIMARY = "#1f4d43";
-const CREAM = "#fbf7f1";
-const ACCENT = "#c8873f";
+const PRIMARY = "#0E2338";
+const CREAM = "#FFFFFF";
+const ACCENT = "#00A3FF";
+const GOLD = "#E5A823";
 
 mkdirSync(path.join(ROOT, "public", "images"), { recursive: true });
 
@@ -40,10 +41,10 @@ async function buildOgImage() {
       </linearGradient>
     </defs>
     <rect x="${photoLeft - 160}" y="0" width="220" height="${height}" fill="url(#fade)"/>
-    <text x="72" y="230" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="600" fill="${CREAM}">Hipnoterapia Avançada</text>
-    <text x="72" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="600" fill="${CREAM}">para Ansiedade</text>
-    <rect x="72" y="335" width="90" height="6" fill="${ACCENT}"/>
-    <text x="72" y="400" font-family="Arial, sans-serif" font-size="30" fill="${CREAM}" opacity="0.92">Método SER · Júlio Dechante</text>
+    <text x="72" y="230" font-family="Arial Black, Arial, sans-serif" font-size="54" font-weight="900" fill="${CREAM}">Hipnoterapia Avançada</text>
+    <text x="72" y="300" font-family="Arial Black, Arial, sans-serif" font-size="54" font-weight="900" fill="${CREAM}">para Ansiedade</text>
+    <rect x="72" y="335" width="90" height="6" fill="${GOLD}"/>
+    <text x="72" y="400" font-family="Arial Black, Arial, sans-serif" font-size="30" fill="${ACCENT}">Método SER · Júlio Dechante</text>
     <text x="72" y="445" font-family="Arial, sans-serif" font-size="26" fill="${CREAM}" opacity="0.75">Sinop-MT e online · +5.000 pessoas tratadas</text>
   </svg>`;
 

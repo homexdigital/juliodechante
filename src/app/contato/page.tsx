@@ -57,7 +57,7 @@ export default function ContatoPage() {
 
       <section className="mx-auto grid max-w-5xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2">
         <div>
-          <h2 className="font-heading text-2xl font-semibold text-primary">
+          <h2 className="font-heading text-2xl font-black uppercase tracking-wide text-cream">
             Informações de contato
           </h2>
           <ul className="mt-6 space-y-5 text-sm text-ink">
@@ -70,7 +70,7 @@ export default function ContatoPage() {
                   href={business.social.googleProfile}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent-dark underline"
+                  className="text-primary underline"
                 >
                   Ver perfil e avaliações no Google
                 </a>
@@ -112,8 +112,8 @@ export default function ContatoPage() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-black/5 bg-white/70 p-6">
-          <h2 className="font-heading text-xl font-semibold text-primary">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 className="font-heading text-xl font-bold text-cream">
             Prefere organizar por escrito?
           </h2>
           <p className="mt-2 text-sm text-ink-soft">
