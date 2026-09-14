@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Julio Dechante | Mestre em Hipnoterapia Avançada
 
-## Getting Started
+Site institucional e de geração de leads para Júlio Dechante, hipnoterapeuta em Sinop-MT, criador do Método SER. Next.js (App Router) com renderização no servidor, dados estruturados (Schema.org) e conteúdo otimizado para buscadores e IAs de busca.
 
-First, run the development server:
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app` — rotas (App Router). Cada `page.tsx` define sua própria metadata via `buildMetadata` (`src/lib/metadata.ts`).
+- `src/lib/site-config.ts` — fonte única de dados do negócio (NAP, WhatsApp, redes sociais).
+- `src/lib/schema.ts` — builders de JSON-LD (Organization, LocalBusiness, Service, FAQPage, Article, BreadcrumbList).
+- `src/lib/keywords.ts` — registro de uma palavra-chave por rota; lança erro em build se duas páginas colidirem.
+- `src/lib/routes.ts` + `src/app/sitemap.ts` — sitemap gerado das rotas reais, com `lastModified` vindo da data do arquivo.
+- `src/content/blog/*.mdx` — posts do blog (frontmatter + Markdown), lidos por `src/lib/blog.ts`.
+- `src/components/sections` — componentes de página (Hero, FAQ, CTA, Breadcrumbs, ContentSection).
 
-## Learn More
+## Build e deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start   # testar o build de produção localmente
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy recomendado: [Vercel](https://vercel.com/new), apontando para este repositório. Configure o domínio `juliodechante.com.br` nas configurações do projeto.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pendências após publicar
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Confirmar `business.activeSince` em `src/lib/site-config.ts` se o ano de início (2019) estiver incorreto.
+- Cadastrar o site no Google Search Console e Bing Webmaster Tools e enviar `/sitemap.xml`.
+- Regenerar assets de imagem (se trocar a foto): `npm run generate:images` a partir de `perfiljulio.jpg`.

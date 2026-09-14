@@ -1,69 +1,173 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ShieldCheck, Sparkles, Users } from "lucide-react";
+import PageHero from "@/components/sections/PageHero";
+import ContentSection from "@/components/sections/ContentSection";
+import Faq from "@/components/sections/Faq";
+import Cta from "@/components/sections/Cta";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata } from "@/lib/metadata";
+import { graph, websiteSchema, serviceSchema } from "@/lib/schema";
+import { business, whatsappLink } from "@/lib/site-config";
 
-export default function Home() {
+export const metadata: Metadata = buildMetadata({
+  path: "/",
+  title: "Hipnoterapia para Ansiedade em Sinop, MT | Método SER",
+  description:
+    "Trate ansiedade e traumas com hipnoterapia avançada em Sinop-MT ou online. Método SER de Júlio Dechante, +5.000 pessoas tratadas. Agende sua sessão.",
+});
+
+const FAQ_ITEMS = [
+  {
+    question: "Hipnoterapia para ansiedade realmente funciona?",
+    answer:
+      "Sim. A hipnoterapia avançada trabalha diretamente com o subconsciente, onde a maioria dos padrões de ansiedade é criada e mantida. O Método SER combina técnicas de hipnose clínica com reeducação emocional para reduzir sintomas de ansiedade de forma estruturada, e já foi aplicado em mais de 5.000 atendimentos.",
+  },
+  {
+    question: "Quantas sessões de hipnoterapia são necessárias para tratar ansiedade?",
+    answer:
+      "Varia de pessoa para pessoa, mas a maioria dos casos de ansiedade apresenta evolução perceptível já nas primeiras sessões do Método SER. Um plano de acompanhamento completo costuma ser definido após a primeira sessão de avaliação, presencial em Sinop-MT ou online.",
+  },
+  {
+    question: "A hipnoterapia é segura e substitui acompanhamento médico?",
+    answer:
+      "A hipnoterapia é uma técnica segura quando conduzida por um profissional qualificado, mas não substitui diagnóstico ou tratamento médico e psiquiátrico quando estes forem necessários. Júlio Dechante atua como hipnoterapeuta complementar ao cuidado de saúde do cliente.",
+  },
+  {
+    question: "O atendimento é só presencial em Sinop ou também online?",
+    answer:
+      "Júlio Dechante atende presencialmente em Sinop-MT, na Av. das Embaúbas, 2065, e também realiza hipnoterapia online para clientes em qualquer cidade do Brasil ou do mundo, com o mesmo protocolo do Método SER.",
+  },
+  {
+    question: "O que é o Método SER?",
+    answer:
+      "O Método SER é o protocolo exclusivo de hipnoterapia avançada criado por Júlio Dechante para tratar ansiedade, traumas, fobias e bloqueios emocionais, reeducando padrões inconscientes na raiz do problema, sem uso de remédios.",
+  },
+] as const;
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <JsonLd
+        data={graph(
+          websiteSchema(),
+          serviceSchema({
+            name: "Hipnoterapia para Ansiedade",
+            description:
+              "Sessões de hipnoterapia avançada para tratamento de ansiedade, presenciais em Sinop-MT e online para todo o mundo, pelo Método SER de Júlio Dechante.",
+            path: "/",
+          }),
+        )}
+      />
+
+      <PageHero
+        eyebrow="Hipnoterapia Avançada em Sinop-MT e online"
+        h1="Hipnoterapia para ansiedade em Sinop com o Método SER"
+        intro="Se a ansiedade está roubando sua leveza de viver, a hipnoterapia avançada trata a raiz inconsciente do problema, não só o sintoma. Júlio Dechante já aplicou o Método SER em mais de 5.000 pessoas, presencialmente em Sinop-MT e online para o mundo todo."
+      >
+        <a
+          href={whatsappLink("Olá, Júlio! Quero saber mais sobre a hipnoterapia para ansiedade.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-cream transition-colors hover:bg-primary-dark"
+        >
+          Agendar minha sessão
+        </a>
+        <Link
+          href="/metodo-ser"
+          className="inline-flex items-center justify-center rounded-full border border-primary px-7 py-3.5 text-base font-semibold text-primary transition-colors hover:bg-primary hover:text-cream"
+        >
+          Conhecer o Método SER
+        </Link>
+      </PageHero>
+
+      <section aria-label="Números em destaque" className="border-b border-black/5 bg-white/60">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 py-10 text-center sm:grid-cols-3 sm:px-6">
+          <div>
+            <p className="font-heading text-3xl font-semibold text-primary">+5.000</p>
+            <p className="mt-1 text-sm text-ink-soft">pessoas tratadas com o Método SER</p>
+          </div>
+          <div>
+            <p className="font-heading text-3xl font-semibold text-primary">+7 anos</p>
+            <p className="mt-1 text-sm text-ink-soft">de atuação como hipnoterapeuta</p>
+          </div>
+          <div>
+            <p className="font-heading text-3xl font-semibold text-primary">100%</p>
+            <p className="mt-1 text-sm text-ink-soft">presencial em Sinop-MT ou online no mundo</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <ContentSection id="como-funciona" heading="Como funciona a hipnoterapia para ansiedade?">
+        <p>
+          A hipnoterapia avançada leva você a um estado profundo de relaxamento e foco, no qual é
+          possível acessar e reorganizar os padrões inconscientes que alimentam crises de
+          ansiedade, medos e bloqueios emocionais. O <Link href="/metodo-ser">Método SER</Link>{" "}
+          estrutura esse processo em etapas claras, aplicadas nas sessões presenciais em Sinop-MT
+          ou por videochamada.
+        </p>
+        <ul>
+          <li>
+            <strong>S — Sentir:</strong> identificar onde a ansiedade se instalou no corpo e na
+            mente.
+          </li>
+          <li>
+            <strong>E — Entender:</strong> encontrar a raiz inconsciente do padrão de ansiedade.
+          </li>
+          <li>
+            <strong>R — Reeducar:</strong> substituir o padrão antigo por respostas emocionais
+            saudáveis, sem remédios.
+          </li>
+        </ul>
+        <p>
+          Conheça também os atendimentos específicos para{" "}
+          <Link href="/servicos/hipnoterapia-para-traumas">traumas</Link>,{" "}
+          <Link href="/servicos/hipnoterapia-para-fobias-e-medos">fobias e medos</Link> e{" "}
+          <Link href="/servicos/hipnoterapia-para-bloqueios-emocionais">bloqueios emocionais</Link>.
+        </p>
+      </ContentSection>
+
+      <section aria-label="Diferenciais" className="bg-cream-dark/50">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+          <h2 className="text-center font-heading text-2xl font-semibold text-primary sm:text-3xl">
+            Por que tratar a ansiedade com Júlio Dechante?
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-3">
+            <div className="text-center">
+              <Sparkles className="mx-auto h-8 w-8 text-accent-dark" aria-hidden="true" />
+              <h3 className="mt-3 font-heading text-lg font-semibold text-ink">Método SER exclusivo</h3>
+              <p className="mt-2 text-sm text-ink-soft">
+                Protocolo próprio de hipnoterapia avançada, desenvolvido por Júlio Dechante ao
+                longo de mais de 7 anos de prática clínica.
+              </p>
+            </div>
+            <div className="text-center">
+              <Users className="mx-auto h-8 w-8 text-accent-dark" aria-hidden="true" />
+              <h3 className="mt-3 font-heading text-lg font-semibold text-ink">+5.000 pessoas tratadas</h3>
+              <p className="mt-2 text-sm text-ink-soft">
+                Experiência aplicada em casos reais de ansiedade, traumas, fobias e bloqueios
+                emocionais em Sinop-MT e a distância.
+              </p>
+            </div>
+            <div className="text-center">
+              <ShieldCheck className="mx-auto h-8 w-8 text-accent-dark" aria-hidden="true" />
+              <h3 className="mt-3 font-heading text-lg font-semibold text-ink">Sem remédios, sem julgamentos</h3>
+              <p className="mt-2 text-sm text-ink-soft">
+                Um espaço de escuta e técnica, para reeducar emoções pela raiz. Saiba mais{" "}
+                <Link href="/sobre">sobre a trajetória de Júlio Dechante</Link>.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Faq items={[...FAQ_ITEMS]} heading="Perguntas frequentes sobre hipnoterapia para ansiedade" />
+
+      <Cta
+        heading="Pronto para tratar a ansiedade na raiz?"
+        description={`Agende uma conversa com ${business.founderName} pelo WhatsApp e descubra como o Método SER pode ajudar você, presencialmente em Sinop-MT ou online.`}
+        whatsappMessage="Olá, Júlio! Vim pelo site e quero agendar uma sessão de hipnoterapia para ansiedade."
+      />
+    </>
   );
 }
